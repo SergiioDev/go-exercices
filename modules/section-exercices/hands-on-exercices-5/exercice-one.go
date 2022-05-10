@@ -1,21 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-type Person struct {
-	firstName                 string
-	lastName                  string
-	favouriteIceCreamFlavours []string
+type Vehicle struct {
+	doors int
+	color string
+}
+
+type Truck struct {
+	Vehicle
+	fourWheel bool
+}
+
+type Sedan struct {
+	Vehicle
+	luxury bool
 }
 
 func main() {
-	person1 := Person{
-		firstName:                 "Jack",
-		lastName:                  "Sparrow",
-		favouriteIceCreamFlavours: []string{"Chocolate", "Cream"},
+	greatTruck := Truck{
+		Vehicle:   Vehicle{doors: 2, color: "blue"},
+		fourWheel: true,
 	}
-	fmt.Printf("\tName: %v \n\tLast name: %v \n\tFavourite Ice Cream Flavours: ", person1.firstName, person1.lastName)
-	for _, flavour := range person1.favouriteIceCreamFlavours {
-		fmt.Printf("%v & ", flavour)
+	greatSedan := Sedan{
+		Vehicle: Vehicle{doors: 4, color: "black"},
+		luxury:  true,
 	}
+	fmt.Printf("Truck = %v \nSedan = %v\n", greatTruck, greatSedan)
 }
