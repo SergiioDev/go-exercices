@@ -28,5 +28,6 @@ func main() {
 		Vehicle: Vehicle{doors: 4, color: "black"},
 		luxury:  true,
 	}
+
 	fmt.Printf("Truck = %v \nSedan = %v\n", greatTruck, greatSedan)
 }
