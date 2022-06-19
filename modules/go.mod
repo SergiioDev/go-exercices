@@ -1,4 +1,4 @@
-module example.com/username/repo
+module github.com/SergiioDev/go-exercices
 
 go 1.18
 

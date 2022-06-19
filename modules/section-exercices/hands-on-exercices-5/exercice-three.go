@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
@@ -13,6 +15,5 @@ func main() {
 		lastName:  "Sparrow",
 		job:       "Captain",
 	}
-
 	fmt.Println(employee)
 }
